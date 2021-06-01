@@ -1,0 +1,84 @@
+/* La pantalla del movil */
+.mobile-screen {
+    bottom: 0px;
+    position: absolute;
+    top: 58px;
+    background: linear-gradient(0, #bbb,  #fff2cc 60%);
+}
+
+/* Que el div ocupe el 100% */
+.all-height {
+    height: 100%;
+    position: relative;
+}
+
+#sidebar {
+    background-color: salmon;
+    position: absolute;
+    display: none;
+    top: 58px;
+    bottom: 0;
+    width: 200px;
+    z-index: 1;
+}
+
+/* Layout para los buttons de abajo */
+.bottom-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.div_edit {
+    cursor: pointer;
+}
+
+.alert {
+    padding: 0.5rem 1rem !important;
+}
+
+/* Tachado para las compras */
+.finished {
+    text-decoration: line-through;
+    color: red;
+}
+
+/* SPINNER */
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #888;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+  }
+  .lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+  }
+  .lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+  }
+  @keyframes lds-facebook {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50%, 100% {
+      top: 24px;
+      height: 32px;
+    }
+  }
+
