@@ -14,3 +14,5 @@ class Buy extends Model
         return $this->belongsTo(ProductList::class);
     }
 }
+
+asdada
