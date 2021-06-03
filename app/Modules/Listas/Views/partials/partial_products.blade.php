@@ -27,7 +27,7 @@
         <div class="alert alert-dark">
             <div class="row">
                 <div class="col-1">
-                    <i class="fas {{ $product->category->icon }}"></i>
+                    <i class="fas {{ $product->category->icon ?? '' }}"></i>
                 </div>
                 <div class="col-9 div_edit" data-id="{{ $product->id }}">
                     <strong>{{ $product->name }}</strong>

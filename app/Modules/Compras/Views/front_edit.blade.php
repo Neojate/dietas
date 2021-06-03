@@ -32,27 +32,29 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal_pay" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">{{ trans('Compras::front_lang.end_buy') }}</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    {!! Form::model($buy, $form_data, ['role' => 'form']) !!}
-                        {!! Form::hidden('productListId', $productList->id) !!}
-                        {!! Form::label('in_cost', trans('Compras::front_lang.cost')) !!}
-                        {!! Form::text('cost', null, ['class' => 'form-control', 'id' => 'in_cost']) !!}
-                    {!! Form::close() !!}
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ trans('Listas::front_lang.close') }}</button>
-                    <button type="button" class="btn btn-primary" id="btn_save">{{ trans('Compras::front_lang.end_buy') }}</button>
+    @php
+        /* <div class="modal fade" id="modal_pay" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">{{ trans('Compras::front_lang.end_buy') }}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        {!! Form::model($buy, $form_data, ['role' => 'form']) !!}
+                            {!! Form::hidden('productListId', $productList->id) !!}
+                            {!! Form::label('in_cost', trans('Compras::front_lang.cost')) !!}
+                            {!! Form::text('cost', null, ['class' => 'form-control', 'id' => 'in_cost']) !!}
+                        {!! Form::close() !!}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ trans('Listas::front_lang.close') }}</button>
+                        <button type="button" class="btn btn-primary" id="btn_save">{{ trans('Compras::front_lang.end_buy') }}</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div> */
+    @endphp
 
     <div class="all-height pt-4">
 
