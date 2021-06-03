@@ -11,6 +11,6 @@ class Buy extends Model
     protected $table = 'buy';
 
     public function productList() {
-        return $this->belongsTo(ProductList::class);
+        return $this->belongsTo(ProductList::class, 'productlist_id', 'id');
     }
 }
