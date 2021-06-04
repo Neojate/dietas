@@ -48,7 +48,6 @@ class ComprarController extends Controller
             $buy->productList_id = $request->productListId;
             $buy->user_id = auth()->user()->id;
             $buy->cost = $request->cost;
-            dd($buy);
             $buy->save();
 
             DB::commit();
