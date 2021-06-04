@@ -43,14 +43,14 @@ class ComprarController extends Controller
 
     private function save(Request $request, Buy $buy) {
         try {
-            DB::beginTransaction();
+            /* DB::beginTransaction();
 
             $buy->productList_id = $request->productListId;
             $buy->user_id = auth()->user()->id;
             $buy->cost = $request->cost;
             $buy->save();
 
-            DB::commit();
+            DB::commit(); */
             return true;
         } catch (Exception $e) {
             DB::rollback();

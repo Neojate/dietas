@@ -63,7 +63,7 @@
             <div class="alert alert-dark">
                 <div class="row">
                     <div class="col-1">
-                        <i class="fas {{ $product->category->icon }}"></i>
+                        <i class="fas {{ $product->category->icon ?? '' }}"></i>
                     </div>
                     <div class="col-11 div_edit" data-id="{{ $product->id }}">
                         <strong class="product_name">{{ $product->name }}</strong>
