@@ -11,7 +11,9 @@ use App\Modules\Listas\Models\ProductList;
 class ListaController extends Controller
 {
     public function index() {
-        $productList = ProductList::where('user_id', auth()->user()->id)->get();
+        $productList = ProductList::notUsed()
+            ->where('user_id', auth()->user()->id)
+            ->get();
 
         return view('Listas::front_index', compact('productList'));
     }

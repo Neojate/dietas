@@ -11,7 +11,9 @@ use App\Modules\Listas\Models\ProductList;
 class ComprarController extends Controller
 {
     public function index() {
-        $productList = ProductList::where('user_id', auth()->user()->id)->get();
+        $productList = ProductList::notUsed()
+            ->where('user_id', auth()->user()->id)
+            ->get();
 
         return view('Compras::front_index', compact('productList'));
     }
@@ -35,13 +37,15 @@ class ComprarController extends Controller
 
     public function store(Request $request) {
         $buy = new Buy();
-        $response = $this->save($request, $buy);
+        $productList = ProductList::find($request->productListId);
+
+        $response = $this->save($request, $buy, $productList);
 
         if ($response)
             return redirect()->route('compras.index');
     }
 
-    private function save(Request $request, Buy $buy) {
+    private function save(Request $request, Buy $buy, ProductList $productList) {
         try {
             DB::beginTransaction();
 
@@ -49,6 +53,9 @@ class ComprarController extends Controller
             $buy->user_id           = auth()->user()->id;
             $buy->cost              = $request->cost;
             $buy->save();
+
+            $productList->used = true;
+            $productList->save();
 
             DB::commit();
             return true;
