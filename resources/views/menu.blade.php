@@ -12,11 +12,19 @@
     </nav>
     <nav id="sidebar">
         <ul>
-            <li>Inicio</li>
-            <li>Crear lista</li>
-            <li>Mis listas</li>
+            <li>
+                <a href="{{ url('/home') }}">{{ trans('front_lang.home') }}</a>
+            </li>
+            <li>
+                <a href="{{ route('listas.create') }}">{{ trans('front_lang.create_list') }}</a>
+            </li>
+            <li>
+                <a href="{{ route('listas.index') }}">{{ trans('front_lang.listas') }}</a>
+            </li>
             <li>Histórico</li>
-            <li>A comprar!</li>
+            <li>
+                <a href="{{ route('compras.index') }}">{{ trans('front_lang.comprar') }}</a>
+            </li>
             <li><button id="btn_logout" class="btn btn-link">{{ trans('front_lang.logout') }}</button></li>
             <form action="logout" id="form_logout" method="POST">
                 @csrf
@@ -30,8 +38,6 @@
             $side_bar.animate({width: 'toggle'});
         });
 
-        $('#btn_logout').click(() => {
-            $('#form_logout')[0].submit();
-        });
+        $('#btn_logout').click(() => $('#form_logout')[0].submit());
     </script>
 @endif
