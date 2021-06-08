@@ -13,7 +13,12 @@
             {{ $productList->description ?? '' }}
         </textarea>
     </div>
-    <div class="d-grid gap-2 my-4">
-        <button class="btn btn-primary">{{ trans('Listas::front_lang.list_save') }}</button>
+    <div class="d-grid gap-2 my-4 position-relative">
+        <div class="save-button text-center">
+            <i class="fas fa-save fa-2x"></i>
+        </div>
+        <button class="button">
+            {{ trans('Listas::front_lang.list_save') }}
+        </button>
     </div>
 {!! Form::close() !!}

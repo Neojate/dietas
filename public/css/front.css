@@ -1,3 +1,12 @@
+/* COLORES */
+:root {
+    --brown     : #fff2cc;
+    --grey      : #bbb;
+    --lightgreen: #94ad8d;
+    --darkgreen : #3f6f61;
+    --darkbrown : #69462d;
+}
+
 /* La pantalla del movil */
 .mobile-screen {
     bottom: 0px;
@@ -13,13 +22,14 @@
 }
 
 #sidebar {
-    background-color: salmon;
+    background-color: white;
     position: absolute;
     display: none;
     top: 58px;
     bottom: 0;
     width: 200px;
     z-index: 1;
+
 }
 
 /* Layout para los buttons de abajo */
@@ -28,6 +38,13 @@
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+.location-button {
+    background-color: var(--lightgreen);
+    padding: 5px;
+
+
 }
 
 .div_edit {
@@ -43,6 +60,29 @@
     text-decoration: line-through;
     color: red;
 }
+
+.save-button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    background-color: var(--darkgreen);
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.button {
+    background-color: var(--lightgreen);
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    color: var(--darkbrown);
+    font-weight: bold;
+}
+
 
 /* SPINNER */
 .lds-facebook {

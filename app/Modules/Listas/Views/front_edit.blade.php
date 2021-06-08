@@ -17,13 +17,19 @@
 
         <div class="row bottom-buttons text-center py-4">
             <div class="col d-grid gap-2">
-                <button class="btn btn-primary" data-bs-target="#carouselExampleControls" data-bs-slide="prev">{{ trans('Listas::front_lang.products') }}</button>
+                <button class="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <i class="fas fa-shopping-cart fa-2x"></i>
+                </button>
             </div>
             <div class="col d-grid gap-2">
-                <a class="btn btn-primary" href="{{ route('listas.index') }}">{{ trans('Listas::front_lang.back') }}</a>
+                <a class="button" href="{{ route('listas.index') }}">
+                    <i class="fas fa-backward fa-2x"></i>
+                </a>
             </div>
             <div class="col d-grid gap-2">
-                <button class="btn btn-primary" data-bs-target="#carouselExampleControls" data-bs-slide="next">{{ trans('Listas::front_lang.info') }}</button>
+                <button class="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <i class="fas fa-info fa-2x"></i>
+                </button>
             </div>
         </div>
 

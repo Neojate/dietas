@@ -44,7 +44,7 @@
                     {!! Form::model($buy, $form_data, ['role' => 'form']) !!}
                         {!! Form::hidden('productListId', $productList->id) !!}
                         {!! Form::label('in_cost', trans('Compras::front_lang.cost')) !!}
-                        {!! Form::text('cost', null, ['class' => 'form-control', 'id' => 'in_cost']) !!}
+                        {!! Form::text('cost', null, ['autocomplete' => 'off', 'class' => 'form-control', 'id' => 'in_cost']) !!}
                     {!! Form::close() !!}
                 </div>
                 <div class="modal-footer">
@@ -87,10 +87,6 @@
         </div>
 
     </div>
-
-
-
-
 
 @endsection
 
