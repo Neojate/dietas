@@ -7,7 +7,7 @@
     </div>
     <div class="form-group">
         {!! Form::label('product_quantity', trans('Listas::front_lang.product_quantity')) !!}
-        {!! Form::text('quantity', null, ['autocomplete' => 'off', class' => 'form-control', 'id' => 'product_quantity']) !!}
+        {!! Form::text('quantity', null, ['autocomplete' => 'off', 'class' => 'form-control', 'id' => 'product_quantity']) !!}
     </div>
     <div class="form-group">
         {!! Form::label('category_id', trans('Listas::front_lang.category_id')) !!}
