@@ -22,8 +22,13 @@
     </div>
 
     <h1 class="mt-4">{{ trans('Listas::front_lang.my_list') }}</h1>
-    <div class="d-grid gap-2 mb-4">
-        <a class="btn btn-primary" href="{{ route('listas.create') }}">{{ trans('Listas::front_lang.new_list') }}</a>
+    <div class="d-grid gap-2 my-4 position-relative">
+        <div class="save-button text-center">
+            <i class="fas fa-store fa-2x"></i>
+        </div>
+        <button class="button" id="btn_newlist">
+            {{ trans('Listas::front_lang.new_list') }}
+        </button>
     </div>
     @foreach ($productList as $list)
         <div class="alert alert-danger">
@@ -57,5 +62,7 @@
         $('.div_edit').click(function() {
             location.href = `{{ url('/listas/edit') }}/${this.dataset.id}`;
         });
+
+        $('#btn_newlist').click(() => location.href = '{{ route("listas.create") }}');
     </script>
 @endsection

@@ -16,9 +16,13 @@
     </div>
 </div>
 
-<div class="d-grid gap-2 my-4">
-    <button class="btn btn-primary" id="btn_addproduct" {{ is_null($productList->id) ? 'disabled' : '' }}>
+<div class="d-grid gap-2 my-4 position-relative">
+    <div class="save-button text-center">
+        <i class="fas fa-shopping-bag fa-2x"></i>
+    </div>
+    <button class="button" id="btn_addproduct" {{ is_null($productList->id) ? 'disabled' : '' }}>
         {{ trans('Listas::front_lang.add_product') }}
+    </button>
     </button>
 </div>
 

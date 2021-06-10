@@ -9,7 +9,7 @@
     </div>
     <div class="form-group">
         {!! Form::label('list_description', trans('Listas::front_lang.list_description')) !!}
-        <textarea class="form-control" name="description" id="description" cols="30" rows="10">
+        <textarea class="form-control" name="description" id="description" cols="30" rows="5">
             {{ $productList->description ?? '' }}
         </textarea>
     </div>
