@@ -17,7 +17,10 @@
         let option = {
             xAxis: {
                 type: 'category',
-                data: cuentas.map(cuenta => cuenta.date)
+                data: cuentas.map(cuenta => cuenta.date),
+                axisLabel: {
+                    rotate: 45
+                }
             },
             yAxis: {
                 type: 'value'
