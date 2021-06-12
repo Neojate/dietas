@@ -26,7 +26,10 @@
     </button>
 </div>
 
-<div id="product_list" style="overflow: auto; height: 300px;">
+<div class="position-relative">
+
+
+<div id="product_list">
     @foreach ($productList->products as $product)
         <div class="alert alert-dark">
             <div class="row">
@@ -43,4 +46,5 @@
             </div>
         </div>
     @endforeach
+</div>
 </div>

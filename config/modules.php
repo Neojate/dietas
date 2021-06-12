@@ -3,6 +3,7 @@
 return [
     'enable' => [
         'Compras',
+        'Historial',
         'Listas',
     ],
 ];

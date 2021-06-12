@@ -21,7 +21,9 @@
             <li>
                 <a href="{{ route('listas.index') }}">{{ trans('front_lang.listas') }}</a>
             </li>
-            <li>Histórico</li>
+            <li>
+                <a href="{{ route('historial.index') }}">{{ trans('front_lang.historial') }}</a>
+            </li>
             <li>
                 <a href="{{ route('compras.index') }}">{{ trans('front_lang.comprar') }}</a>
             </li>

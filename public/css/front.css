@@ -83,6 +83,11 @@
     font-weight: bold;
 }
 
+#product_list {
+    height: calc(100% - 20px);
+    overflow: auto;
+}
+
 
 /* SPINNER */
 .lds-facebook {
